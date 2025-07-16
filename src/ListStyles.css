@@ -1,0 +1,28 @@
+.list-container {
+  background: var(--offWhite);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.list-container h2 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.list-container ul {
+  padding: 0;
+  list-style: none;
+}
+
+.list-container li {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--outline);
+  font-size: 1.1rem;
+}
+
+.list-container li:last-child {
+  border-bottom: none;
+}

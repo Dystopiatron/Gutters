@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  gap: 2rem;
+  background-color: var(--primary);
+  padding: 1rem 2rem;
+  list-style: none;
+  margin: 0;
+}
+
+.navbar-item {
+  font-size: 1.2rem;
+}
+
+.navbar-item a {
+  color: var(--white);
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.navbar-item a:hover {
+  color: var(--secondary);
+}

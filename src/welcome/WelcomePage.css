@@ -1,0 +1,26 @@
+//create basic styles for the welcome page
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;                      
+    justify-content: center;
+
+    height: 100vh;
+    background-color: var(--primary);
+
+    color: var(--white);    
+    font-size: 2rem;
+    text-align: center;
+}
+
+.welcome h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.welcome div {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+.welcome span {
+  font-weight: bold;
+}
