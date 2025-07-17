@@ -13,3 +13,4 @@ export const leaveClub = (membershipId) => {
     method: "DELETE"
   })
 }
+

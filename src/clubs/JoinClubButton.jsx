@@ -1,8 +1,7 @@
 import React from "react"
 
 export const JoinClubButton = ({ clubId, onJoined }) => {
-  // Get the current user from localStorage
-  const user = JSON.parse(localStorage.getItem("gutters_user"))
+  const user = JSON.parse(localStorage.getItem("gutters_user"))//this is the user object from localStorage
 
   const handleJoin = () => {
     fetch("http://localhost:8088/memberships", {

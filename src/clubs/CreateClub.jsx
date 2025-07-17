@@ -7,3 +7,4 @@ export const NewClubPost = (club) => {
     body: JSON.stringify(club),
   })
 }
+

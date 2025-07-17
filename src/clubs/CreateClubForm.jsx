@@ -5,9 +5,10 @@ export const CreateClubForm = ({ onClubCreated }) => {
   const [name, setName] = useState("")
   const [description, setDescription] = useState("")
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const newClub = { name, description }
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    const user = JSON.parse(localStorage.getItem("gutters_user"))
+    const newClub = { name, description, ownerId: user.id }
     NewClubPost(newClub).then(() => {
       setName("")
       setDescription("")
@@ -24,20 +25,19 @@ export const CreateClubForm = ({ onClubCreated }) => {
           <input
             type="text"
             value={name}
-            onChange={e => setName(e.target.value)}
+            onChange={event => setName(event.target.value)}
             required
-            
           />
         </label>
       </div>
-        <div>
+      <div>
         <label>
           Description:
           <input
             type="text"
             value={description}
-            onChange={e => setDescription(e.target.value)}
-            required    
+            onChange={event => setDescription(event.target.value)}
+            required
           />
         </label>
       </div>

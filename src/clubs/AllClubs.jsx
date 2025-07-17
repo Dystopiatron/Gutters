@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react"
-import { getAllClubs } from "./ClubServices"
+import { getAllClubs, deleteClub } from "./ClubServices"
 import { CreateClubForm } from "./CreateClubForm"
 import "../ListStyles.css"
 import { JoinClubButton } from "./JoinClubButton"
 import { LeaveClubButton } from "./LeaveClubButton"
-
 
 export const AllClubs = () => {
   const [clubs, setClubs] = useState([])
@@ -15,7 +14,6 @@ export const AllClubs = () => {
 
   const getMembershipForUser = (clubId, userId) =>
     memberships.find(member => member.clubId === clubId && member.userId === userId)
-
 
   const fetchClubs = () => {
     getAllClubs().then(setClubs)
@@ -48,6 +46,18 @@ export const AllClubs = () => {
             <li key={club.id}>
               <strong>{club.name}</strong>
               <div>{club.description}</div>
+              {club.ownerId === user?.id && (
+                <button
+                  className="btn-warning"
+                  onClick={() => {
+                    if (window.confirm("Are you sure you want to remove this club?")) {
+                      deleteClub(club.id).then(fetchClubs)
+                    }
+                  }}
+                >
+                  Remove
+                </button>
+              )}
               <JoinClubButton clubId={club.id} onJoined={fetchMemberships} />
               <div>
                 <strong>Members:</strong>

@@ -4,21 +4,20 @@ import { useNavigate } from "react-router-dom"
 import "./Login.css"
 import { getUserByEmail } from "../user/UserServices"
 export const Login = () => {
-  const [email, set] = useState("user_eight@example.com")
-  const navigate = useNavigate()
+  const [email, set] = useState("email@example.com")//uses useState to manage the email input state
+  const navigate = useNavigate()// useNavigate is a hook that allows you to navigate to different routes in your application
 
-  const handleLogin = (e) => {
-    e.preventDefault()
-
-    getUserByEmail(email).then((foundUsers) => {
-      if (foundUsers.length === 1) {
-        const user = foundUsers[0]
+  const handleLogin = (event) => {
+    event.preventDefault()
+    getUserByEmail(email).then((foundUsers) => {  // Assuming getUserByEmail returns an array of users (email) means it is searching by email
+      if (foundUsers.length === 1) {    // Check if exactly one user is found
+        const user = foundUsers[0]// Get the first user from the array
         localStorage.setItem(
           "gutters_user",
-          JSON.stringify({
+          JSON.stringify({//stringify converts a JavaScript object into a JSON string
             id: user.id,
-            isStaff: user.isStaff,
-          })
+            isUser: user.isUser,
+          })//
         )
 
         navigate("/")
@@ -39,7 +38,7 @@ export const Login = () => {
               <input
                 type="email"
                 value={email}
-                onChange={(evt) => set(evt.target.value)}
+                onChange={(event) => set(event.target.value)}// this sets the email state
                 className="form-control"
                 placeholder="Email address"
                 required
