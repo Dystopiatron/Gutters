@@ -15,11 +15,11 @@ export const AllComics = () => {
       <ul className="comicsList">
         {comics.map(comic => (
           <li key={comic.id} className="comicItem">
-            {comic.imageUrl && (
-              <img
-                src={comic.imageUrl}
-                alt={comic.title}
-                className="comicImage"
+            {comic.coverURL && (
+  <img
+    src={comic.coverURL}
+    alt={comic.title}
+    className="comicImage"
               />
             )}
             <div>

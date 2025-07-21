@@ -14,3 +14,26 @@ export const leaveClub = (membershipId) => {
   })
 }
 
+export const editClub = (club) => { 
+  return fetch(`http://localhost:8088/clubs/${club.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(club)
+  })
+}
+
+export const joinClub = (clubId, userId) => {
+  return fetch (`http://localhost:8088/memberships`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      clubId: clubId,
+      userId: userId
+    })
+  })
+}
+

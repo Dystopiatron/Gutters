@@ -13,12 +13,12 @@ export const Login = () => {
       if (foundUsers.length === 1) {    // Check if exactly one user is found
         const user = foundUsers[0]// Get the first user from the array
         localStorage.setItem(
-          "gutters_user",
-          JSON.stringify({//stringify converts a JavaScript object into a JSON string
-            id: user.id,
-            isUser: user.isUser,
-          })//
-        )
+  "gutters_user",
+  JSON.stringify({
+    id: user.id,
+    name: user.name,
+  })
+)
 
         navigate("/")
       } else {

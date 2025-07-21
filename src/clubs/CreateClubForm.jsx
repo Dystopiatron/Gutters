@@ -5,7 +5,7 @@ export const CreateClubForm = ({ onClubCreated }) => {
   const [name, setName] = useState("")
   const [description, setDescription] = useState("")
 
-  const handleSubmit = (event) => {
+  const newClub = (event) => {
     event.preventDefault()
     const user = JSON.parse(localStorage.getItem("gutters_user"))
     const newClub = { name, description, ownerId: user.id }
@@ -17,7 +17,7 @@ export const CreateClubForm = ({ onClubCreated }) => {
   }
 
   return (
-    <form className="list-container" onSubmit={handleSubmit}>
+    <form className="list-container" onSubmit={newClub}>
       <h2>Create a New Club</h2>
       <div>
         <label>

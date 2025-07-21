@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react"
 import { getAllClubs, deleteClub } from "./ClubServices"
 import { CreateClubForm } from "./CreateClubForm"
+import { ClubSignUp } from "./JoinClub"
 import "../ListStyles.css"
-import { JoinClubButton } from "./JoinClubButton"
-import { LeaveClubButton } from "./LeaveClubButton"
 
 export const AllClubs = () => {
   const [clubs, setClubs] = useState([])
@@ -12,8 +11,6 @@ export const AllClubs = () => {
 
   const user = JSON.parse(localStorage.getItem("gutters_user"))
 
-  const getMembershipForUser = (clubId, userId) =>
-    memberships.find(member => member.clubId === clubId && member.userId === userId)
 
   const fetchClubs = () => {
     getAllClubs().then(setClubs)
@@ -37,54 +34,19 @@ export const AllClubs = () => {
   }
 
   return (
-    <div>
-      <CreateClubForm onClubCreated={fetchClubs} />
-      <div className="list-container">
-        <h2>All Clubs</h2>
-        <ul>
-          {clubs.map(club => (
-            <li key={club.id}>
+    <div className="all-clubs-container">
+      <h2>All Clubs</h2>
+      <ul className="club-list">
+        {clubs.map(club => (
+          <li key={club.id} className="club-list-item">
+            <div>
               <strong>{club.name}</strong>
-              <div>{club.description}</div>
-              {club.ownerId === user?.id && (
-                <button
-                  className="btn-warning"
-                  onClick={() => {
-                    if (window.confirm("Are you sure you want to remove this club?")) {
-                      deleteClub(club.id).then(fetchClubs)
-                    }
-                  }}
-                >
-                  Remove
-                </button>
-              )}
-              <JoinClubButton clubId={club.id} onJoined={fetchMemberships} />
-              <div>
-                <strong>Members:</strong>
-                <ul>
-                  {getClubMembers(club.id).length === 0
-                    ? <li>No members yet.</li>
-                    : getClubMembers(club.id).map(member => {
-                        const membership = getMembershipForUser(club.id, member.id)
-                        return (
-                          <li key={member.id}>
-                            {member.name}
-                            {user && member.id === user.id && membership && (
-                              <LeaveClubButton
-                                membershipId={membership.id}
-                                onLeft={fetchMemberships}
-                              />
-                            )}
-                          </li>
-                        )
-                      })
-                  }
-                </ul>
-              </div>
-            </li>
+              <div>Members: {getClubMembers(club.id).map(member => member.name).join(", ")}</div>
+            </div>
+            <ClubSignUp clubId={club.id} onJoined={fetchMemberships} />
+          </li>
           ))}
-        </ul>
-      </div>
-    </div>
-  )
-}
+    </ul>
+      </div >
+    )
+  }
