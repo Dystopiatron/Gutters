@@ -34,17 +34,18 @@ export const AllClubs = () => {
   }
 
   return (
-    <div className="all-clubs-container">
-      <h2>All Clubs</h2>
-      <ul className="club-list">
-        {clubs.map(club => (
-          <li key={club.id} className="club-list-item">
-            <div>
-              <strong>{club.name}</strong>
-              <div>Members: {getClubMembers(club.id).map(member => member.name).join(", ")}</div>
-            </div>
-            <ClubSignUp clubId={club.id} onJoined={fetchMemberships} />
-          </li>
+      <div className="all-clubs-container">
+    <h2>All Clubs</h2>
+    <CreateClubForm onClubCreated={fetchClubs} />
+    <ul className="club-list">
+      {clubs.map(club => (
+        <li key={club.id} className="club-list-item">
+          <div>
+            <strong>{club.name}</strong>
+            <div>Members: {getClubMembers(club.id).map(member => member.name).join(", ")}</div>
+          </div>
+          <ClubSignUp clubId={club.id} onJoined={fetchMemberships} />
+        </li>
           ))}
     </ul>
       </div >

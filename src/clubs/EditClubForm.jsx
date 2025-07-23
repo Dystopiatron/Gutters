@@ -26,8 +26,8 @@ export const EditClubForm = ({ club, onUpdated, onCancel }) => {
                 required
                 placeholder="Description"
             />
-            <button type="submit">Save</button>
-            <button type="button" onClick={onCancel}>Cancel</button>
+            <button type="submit" className="btn-primary"  >Save</button>
+            <button type="button" className="btn-warning" onClick={onCancel}>Cancel</button>
         </form>
     )
 }

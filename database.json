@@ -114,9 +114,9 @@
     },
     {
       "id": "17",
-      "title": "Ant-Man",
-      "author": "Stan Lee",
-      "genre": "Superhero",
+      "title": "Grendel",
+      "author": "Matt Wagner",
+      "genre": "Indie",
       "coverURL": "https://example.com/antman.jpg"
     },
     {
@@ -146,6 +146,13 @@
       "author": "Alan Moore",
       "genre": "Dystopian",
       "coverURL": "https://example.com/vforvendetta.jpg"
+    },
+    {
+      "id": "22",
+      "title": "Akira",
+      "author": "Katsuhiro Otomo",
+      "genre": "Manga",
+      "coverURL": "https://example.com/flash.jpg"
     }
   ],
   "users": [
@@ -203,38 +210,55 @@
   "clubs": [
     {
       "id": "1",
-      "name": "Superhero Fans",
+      "name": "Superhero Fans are neat!",
       "description": "A club for fans of all superhero comics.",
-      "ownerId": "1"
+      "ownerId": "1",
+      "comicId": "1"
     },
     {
       "id": "2",
       "name": "Manga Enthusiasts",
       "description": "Discuss and share manga comics and artists.",
-      "ownerId": "1"
+      "ownerId": "1",
+      "comicId": "22"
     },
     {
       "id": "3",
-      "name": "Indie Comics Collective",
+      "name": "Indie Comics Collective is for nerds",
       "description": "Support and discover independent comic creators.",
-      "ownerId": "1"
+      "ownerId": "1",
+      "comicId": "17"
     },
     {
       "id": "4",
       "name": "Classic Comics Club",
       "description": "Explore the history and classics of comics.",
-      "ownerId": "1"
+      "ownerId": "1",
+      "comicId": "15"
     },
     {
       "id": "5",
       "name": "Horror Comics Fans",
       "description": "For fans who love horror-themed comics.",
-      "ownerId": "1"
+      "ownerId": "1",
+      "comicId": "20"
+    },
+    {
+      "id": "c2c9",
+      "name": "cool kids",
+      "description": "a place for cool comics",
+      "ownerId": "2",
+      "comicId": "4"
     }
   ],
   "memberships": [
     {
-      "id": "85d1",
+      "id": "63c1",
+      "clubId": "3",
+      "userId": "1"
+    },
+    {
+      "id": "0649",
       "clubId": "1",
       "userId": "1"
     }
