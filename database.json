@@ -1,240 +1,242 @@
-
 {
   "comics": [
     {
-        "id": "1",
-        "title": "Spider-Man",
-        "author": "Stan Lee",
-        "genre": "Superhero",
-        "coverURL": "https://example.com/spiderman.jpg"
+      "id": "1",
+      "title": "Spider-Man",
+      "author": "Stan Lee",
+      "genre": "Superhero",
+      "coverURL": "https://media.thepopverse.com/media/8-deaths-of-spider-man-the-amazing-spider-man-61-marvel-comics-rqrhycpn3jeehied1flpkuk1aa.jpg"
     },
     {
-        "id": "2",
-        "title": "Batman",
-        "author": "Bob Kane",
-        "genre": "Superhero",
-        "coverURL": "https://example.com/batman.jpg"
+      "id": "2",
+      "title": "Batman",
+      "author": "Bob Kane",
+      "genre": "Superhero",
+      "coverURL": "https://example.com/batman.jpg"
     },
     {
-        "id": "3",
-        "title": "Wonder Woman",
-        "author": "William Moulton Marston",
-        "genre": "Superhero",
-        "coverURL": "https://example.com/wonder_woman.jpg"
+      "id": "3",
+      "title": "Wonder Woman",
+      "author": "William Moulton Marston",
+      "genre": "Superhero",
+      "coverURL": "https://example.com/wonder_woman.jpg"
     },
     {
-        "id": "4",
-        "title": "The Incredible Hulk",
-        "author": "Stan Lee",
-        "genre": "Superhero",
-        "coverURL": "https://example.com/hulk.jpg"
+      "id": "4",
+      "title": "The Incredible Hulk",
+      "author": "Stan Lee",
+      "genre": "Superhero",
+      "coverURL": "https://example.com/hulk.jpg"
     },
     {
-        "id": "5",
-        "title": "X-Men",
-        "author": "Stan Lee",
-        "genre": "Superhero",
-        "coverURL": "https://example.com/xmen.jpg"
+      "id": "5",
+      "title": "X-Men",
+      "author": "Stan Lee",
+      "genre": "Superhero",
+      "coverURL": "https://example.com/xmen.jpg"
     },
     {
-        "id": "6",
-        "title": "The Flash",
-        "author": "Gardner Fox",
-        "genre": "Superhero",
-        "coverURL": "https://example.com/flash.jpg"
+      "id": "6",
+      "title": "The Flash",
+      "author": "Gardner Fox",
+      "genre": "Superhero",
+      "coverURL": "https://example.com/flash.jpg"
     },
     {
-        "id": "7",
-        "title": "Superman",
-        "author": "Jerry Siegel",
-        "genre": "Superhero",
-        "coverURL": "https://example.com/superman.jpg"
+      "id": "7",
+      "title": "Superman",
+      "author": "Jerry Siegel",
+      "genre": "Superhero",
+      "coverURL": "https://example.com/superman.jpg"
     },
     {
-        "id": "8",
-        "title": "Iron Man",
-        "author": "Stan Lee",
-        "genre": "Superhero",
-        "coverURL": "https://example.com/ironman.jpg"
+      "id": "8",
+      "title": "Iron Man",
+      "author": "Stan Lee",
+      "genre": "Superhero",
+      "coverURL": "https://example.com/ironman.jpg"
     },
     {
-        "id": "9",
-        "title": "Black Panther",
-        "author": "Jack Kirby",
-        "genre": "Superhero",
-        "coverURL": "https://example.com/blackpanther.jpg"
+      "id": "9",
+      "title": "Black Panther",
+      "author": "Jack Kirby",
+      "genre": "Superhero",
+      "coverURL": "https://example.com/blackpanther.jpg"
     },
     {
-        "id": "10",
-        "title": "Aquaman",
-        "author": "Paul Norris",
-        "genre": "Superhero",
-        "coverURL": "https://example.com/aquaman.jpg"
+      "id": "10",
+      "title": "Aquaman",
+      "author": "Paul Norris",
+      "genre": "Superhero",
+      "coverURL": "https://example.com/aquaman.jpg"
     },
     {
-        "id": "11",
-        "title": "Deadpool",
-        "author": "Rob Liefeld",
-        "genre": "Superhero",
-        "coverURL": "https://example.com/deadpool.jpg"
+      "id": "11",
+      "title": "Deadpool",
+      "author": "Rob Liefeld",
+      "genre": "Superhero",
+      "coverURL": "https://example.com/deadpool.jpg"
     },
     {
-        "id": "12",
-        "title": "Doctor Strange",
-        "author": "Steve Ditko",
-        "genre": "Superhero",
-        "coverURL": "https://example.com/doctor_strange.jpg"
+      "id": "12",
+      "title": "Doctor Strange",
+      "author": "Steve Ditko",
+      "genre": "Superhero",
+      "coverURL": "https://example.com/doctor_strange.jpg"
     },
     {
-        "id": "13",
-        "title": "Captain America",
-        "author": "Joe Simon",
-        "genre": "Superhero",
-        "coverURL": "https://example.com/captain_america.jpg"
+      "id": "13",
+      "title": "Captain America",
+      "author": "Joe Simon",
+      "genre": "Superhero",
+      "coverURL": "https://example.com/captain_america.jpg"
     },
     {
-        "id": "14",
-        "title": "Daredevil",
-        "author": "Frank Miller",
-        "genre": "Superhero",
-        "coverURL": "https://example.com/daredevil.jpg"
+      "id": "14",
+      "title": "Daredevil",
+      "author": "Frank Miller",
+      "genre": "Superhero",
+      "coverURL": "https://example.com/daredevil.jpg"
     },
     {
-        "id": "15",
-        "title": "Silver Surfer",
-        "author": "Stan Lee",
-        "genre": "Superhero",
-        "coverURL": "https://example.com/silversurfer.jpg"
+      "id": "15",
+      "title": "Silver Surfer",
+      "author": "Stan Lee",
+      "genre": "Superhero",
+      "coverURL": "https://example.com/silversurfer.jpg"
     },
     {
-        "id": "16",
-        "title": "Green Lantern",
-        "author": "Martin Nodell",
-        "genre": "Superhero",
-        "coverURL": "https://example.com/greenlantern.jpg"
+      "id": "16",
+      "title": "Green Lantern",
+      "author": "Martin Nodell",
+      "genre": "Superhero",
+      "coverURL": "https://example.com/greenlantern.jpg"
     },
     {
-        "id": "17",
-        "title": "Ant-Man",
-        "author": "Stan Lee",
-        "genre": "Superhero",
-        "coverURL": "https://example.com/antman.jpg"
+      "id": "17",
+      "title": "Ant-Man",
+      "author": "Stan Lee",
+      "genre": "Superhero",
+      "coverURL": "https://example.com/antman.jpg"
     },
     {
-        "id": "18",
-        "title": "Lobo",
-        "author": "Keith Giffen",
-        "genre": "Antihero",
-        "coverURL": "https://example.com/lobo.jpg"
+      "id": "18",
+      "title": "Lobo",
+      "author": "Keith Giffen",
+      "genre": "Antihero",
+      "coverURL": "https://example.com/lobo.jpg"
     },
     {
-        "id": "19",
-        "title": "Deadman",
-        "author": "Jim Starlin",
-        "genre": "Superhero",
-        "coverURL": "https://example.com/deadman.jpg"
+      "id": "19",
+      "title": "Deadman",
+      "author": "Jim Starlin",
+      "genre": "Superhero",
+      "coverURL": "https://example.com/deadman.jpg"
     },
     {
-        "id": "20",
-        "title": "Swamp Thing",
-        "author": "Len Wein",
-        "genre": "Horror/Fantasy",
-        "coverURL": "https://example.com/swampthing.jpg"
+      "id": "20",
+      "title": "Swamp Thing",
+      "author": "Len Wein",
+      "genre": "Horror/Fantasy",
+      "coverURL": "https://example.com/swampthing.jpg"
     },
     {
-        "id": "21",
-        "title": "V for Vendetta",
-        "author": "Alan Moore",
-        "genre": "Dystopian",
-        "coverURL": "https://example.com/vforvendetta.jpg"
+      "id": "21",
+      "title": "V for Vendetta",
+      "author": "Alan Moore",
+      "genre": "Dystopian",
+      "coverURL": "https://example.com/vforvendetta.jpg"
     }
   ],
-"users": [
-  {
-    "id": "1",
-    "name": "user_one",
-    "email": "user_one@email.com"
-  },
-  {
-    "id": "2",
-    "name": "reader_two",
-    "email":"user_two@email.com"
-  },
-  {
-    "id": "3",
-    "name": "comic_lover",
-    "email":"user_three@email.com"
-  },
-  {
-    "id": "4",
-    "name": "fanatic_five",
-    "email":"user_four@email.com"
-  },
-  {
-    "id": "5",
-    "name": "superfan_six",
-    "email":"user_five@email.com"
-  },
-  {
-    "id": "6",
-    "name": "viewer_seven",
-    "email":"user_six@email.com"
-  },
-  {
-    "id": "7",
-    "name": "collector_eight",
-    "email":"user_seven@email.com"
-  },
-  {
-    "id": "8",
-    "name": "thrill_rider",
-    "email":"user_eight@email.com"
-  },
-  {
-    "id": "9",
-    "name": "manga_fan",
-    "email":"user_nine@email.com"
-  },
-  {
-    "id": "10",
-    "name": "comics_diehard",
-    "email":"user_ten@email.com"
-  }
-],
-"clubs":[
-    
-  {
-    "id": "1",
-    "name": "Superhero Fans",
-    "description": "A club for fans of all superhero comics.",
-    "ownerId": "1"
-  },
-  {
-    "id": "2",
-    "name": "Manga Enthusiasts",
-    "description": "Discuss and share manga comics and artists.",
-    "ownerId": "1"
-  },
-  {
-    "id": "3",
-    "name": "Indie Comics Collective",
-    "description": "Support and discover independent comic creators.",
-    "ownerId": "1"
-  },
-  {
-    "id": "4",
-    "name": "Classic Comics Club",
-    "description": "Explore the history and classics of comics.",
-    "ownerId": "1"
-  },
-  {
-    "id": "5",
-    "name": "Horror Comics Fans",
-    "description": "For fans who love horror-themed comics.",
-    "ownerId": "1"
-  }
-],
-"memberships":[
-    
-]
+  "users": [
+    {
+      "id": "1",
+      "name": "user_one",
+      "email": "user_one@email.com"
+    },
+    {
+      "id": "2",
+      "name": "reader_two",
+      "email": "user_two@email.com"
+    },
+    {
+      "id": "3",
+      "name": "comic_lover",
+      "email": "user_three@email.com"
+    },
+    {
+      "id": "4",
+      "name": "fanatic_five",
+      "email": "user_four@email.com"
+    },
+    {
+      "id": "5",
+      "name": "superfan_six",
+      "email": "user_five@email.com"
+    },
+    {
+      "id": "6",
+      "name": "viewer_seven",
+      "email": "user_six@email.com"
+    },
+    {
+      "id": "7",
+      "name": "collector_eight",
+      "email": "user_seven@email.com"
+    },
+    {
+      "id": "8",
+      "name": "thrill_rider",
+      "email": "user_eight@email.com"
+    },
+    {
+      "id": "9",
+      "name": "manga_fan",
+      "email": "user_nine@email.com"
+    },
+    {
+      "id": "10",
+      "name": "comics_diehard",
+      "email": "user_ten@email.com"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "1",
+      "name": "Superhero Fans",
+      "description": "A club for fans of all superhero comics.",
+      "ownerId": "1"
+    },
+    {
+      "id": "2",
+      "name": "Manga Enthusiasts",
+      "description": "Discuss and share manga comics and artists.",
+      "ownerId": "1"
+    },
+    {
+      "id": "3",
+      "name": "Indie Comics Collective",
+      "description": "Support and discover independent comic creators.",
+      "ownerId": "1"
+    },
+    {
+      "id": "4",
+      "name": "Classic Comics Club",
+      "description": "Explore the history and classics of comics.",
+      "ownerId": "1"
+    },
+    {
+      "id": "5",
+      "name": "Horror Comics Fans",
+      "description": "For fans who love horror-themed comics.",
+      "ownerId": "1"
+    }
+  ],
+  "memberships": [
+    {
+      "id": "85d1",
+      "clubId": "1",
+      "userId": "1"
+    }
+  ]
 }

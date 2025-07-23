@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react"
 import "../ListStyles.css"
 import { leaveClub } from "../clubs/ClubServices"
+import { EditClubForm } from "../clubs/EditClubForm"
 
 export const UserProfile = () => {
   const [user, setUser] = useState(null)
   const [joinedClubs, setJoinedClubs] = useState([])
   const [memberships, setMemberships] = useState([])
+  const [editingClubId, setEditingClubId] = useState(null)
 
   useEffect(() => {
     const localUser = JSON.parse(localStorage.getItem("gutters_user"))
@@ -21,7 +23,7 @@ export const UserProfile = () => {
           fetch("http://localhost:8088/clubs")
             .then(res => res.json())
             .then(clubs => {
-              const clubIds = userMemberships.map(m => m.clubId)
+              const clubIds = userMemberships.map(member => member.clubId)
               const userClubs = clubs.filter(club => clubIds.includes(club.id))
               setJoinedClubs(userClubs)
             })
@@ -31,8 +33,8 @@ export const UserProfile = () => {
 
   const handleLeave = (membershipId, clubId) => {
     leaveClub(membershipId).then(() => {
-      setJoinedClubs(prev => prev.filter(c => c.id !== clubId))
-      setMemberships(prev => prev.filter(m => m.id !== membershipId))
+      setJoinedClubs(prev => prev.filter(club => club.id !== clubId))
+      setMemberships(prev => prev.filter(member => member.id !== membershipId))
     })
   }
 
@@ -50,19 +52,51 @@ export const UserProfile = () => {
       ) : (
         <ul>
           {joinedClubs.map(club => {
-            const membership = memberships.find(
-              m => m.clubId === club.id
-            )
+            const membership = memberships.find(member => member.clubId === club.id)
+            const isOwner = club.ownerId === user.id
             return (
               <li key={club.id}>
-                {club.name}
-                {membership && (
-                  <button
-                    className="btn-warning"
-                    onClick={() => handleLeave(membership.id, club.id)}
-                  >
-                    Leave Club
-                  </button>
+                {editingClubId === club.id ? (
+                  <EditClubForm
+                    club={club}
+                    onUpdated={() => {
+                      setEditingClubId(null)
+                      // Refresh clubs and memberships after editing
+                      fetch(`http://localhost:8088/memberships?userId=${user.id}`)
+                        .then(res => res.json())
+                        .then(userMemberships => {
+                          setMemberships(userMemberships)
+                          fetch("http://localhost:8088/clubs")
+                            .then(res => res.json())
+                            .then(clubs => {
+                              const clubIds = userMemberships.map(member => member.clubId)
+                              const userClubs = clubs.filter(club => clubIds.includes(club.id))
+                              setJoinedClubs(userClubs)
+                            })
+                        })
+                    }}
+                    onCancel={() => setEditingClubId(null)}
+                  />
+                ) : (
+                  <>
+                    {club.name}
+                    {membership && (
+                      <button
+                        className="btn-warning"
+                        onClick={() => handleLeave(membership.id, club.id)}
+                      >
+                        Leave Club
+                      </button>
+                    )}
+                    {isOwner && (
+                      <button
+                        className="btn-primary"
+                        onClick={() => setEditingClubId(club.id)}
+                      >
+                        Edit
+                      </button>
+                    )}
+                  </>
                 )}
               </li>
             )
