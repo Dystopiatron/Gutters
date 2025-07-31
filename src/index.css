@@ -1,113 +1,332 @@
-/* Import the google web fonts you want to use */
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Quicksand&family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap");
 
-/* FONTS
-font-family: "Nunito", sans-serif;
-font-family: "Quicksand", sans-serif;
-font-family: "Roboto", sans-serif; 
-*/
 
-/* COLOR PALETTE */
-/* Feel free to change these values and create your own color palette! https://coolors.co/ is a great resource */
 :root {
-  --primary: #ffb400;
-  --secondary: #00a6ed;
-  --info: #7fb800;
-  --warning: #f6511d;
-  --white: #ffffff;
-  --offWhite: #f2f2f3;
-  --dark: #3b3b3b;
-  --outline: #c3c0c0;
-  --appBackground: #dddade;
+  /* Dark Theme Colors */
+  --primary: #1a1a2e;
+  --secondary: #16213e;
+  --accent: #0f3460;
+  --highlight: #e94560;
+  --success: #27ae60;
+  --warning: #f39c12;
+  --danger: #e74c3c;
+  --info: #3498db;
+  
+  /* Text Colors */
+  --text-primary: #f7df03;
+  --text-secondary: #b8b8b8;
+  --text-muted: #6c757d;
+  --text-inverse: #1a1a2e;
+  
+  /* Background Colors */
+  --bg-primary: #0f0f23;
+  --bg-secondary: #1a1a2e;
+  --bg-tertiary: #16213e;
+  --bg-surface: #252545;
+  --bg-overlay: rgba(0, 0, 0, 0.8);
+  
+  /* Border & Shadow */
+  --border-color: #3a3a5c;
+  --border-radius: 12px;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+  
+  /* Typography */
+  --font-primary: "Nunito", sans-serif;
+  --font-heading: "Roboto", serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
 }
 
-/* GLOBAL STYLES */
-body,
-button,
-input,
-select,
-textarea {
-  font-family: "Nunito", sans-serif;
+
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background-color: var(--appBackground);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  line-height: 1.6;
   margin: 0;
+  padding-top: 80px; /* For fixed navbar */
+  transition: all 0.3s ease;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Roboto", serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
 }
 
-/* This prevents all the links in the app from having default underline */
 a {
   text-decoration: none;
-  color: inherit;
-}
-/* This prevents all the links in the app from turning purple after visiting */
-a:visited {
-  color: inherit;
-}
-/* This prevents all the inputs in the app from having that blue outline when in focus */
-input:focus {
-  outline: none;
+  color: var(--accent);
+  transition: color 0.2s ease;
 }
 
-/* GLOBAL STYLING FOR ALL THE BUTTONS BUTTONS */
-button {
-  padding: 0.5rem 1rem;
-  border: 1px solid transparent;
-  border-radius: 0.5rem;
-  color: var(--white);
+a:hover {
+  color: var(--highlight);
+}
+
+/* Button System */
+.btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: var(--font-size-base);
   cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
 }
 
-/* These are all the color options for the buttons */
-/* If you change the color variables, be sure to change the hover colors to be a darker shade of the colors you chose*/
 .btn-primary {
-  background-color: var(--primary);
+  background: var(--accent);
+  color: var(--text-inverse);
+  border-color: var(--accent);
 }
 
 .btn-primary:hover {
-  background-color: #e5a000;
+  background: var(--highlight);
+  border-color: var(--highlight);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-secondary {
-  background-color: var(--secondary);
+  background: var(--secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
 }
 
 .btn-secondary:hover {
-  background-color: #0097d7;
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .btn-warning {
-  background-color: var(--warning);
+  background: var(--warning);
+  color: var(--text-inverse);
+  border-color: var(--warning);
 }
 
 .btn-warning:hover {
-  background-color: #e14617;
+  background: var(--danger);
+  border-color: var(--danger);
+}
+
+.btn-success {
+  background: var(--success);
+  color: var(--text-inverse);
+  border-color: var(--success);
 }
 
 .btn-info {
-  background-color: var(--info);
+  background: var(--info);
+  color: var(--text-inverse);
+  border-color: var(--info);
 }
 
-.btn-info:hover {
-  background-color: #71a500;
+/* Card System */
+.card {
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
 }
 
-/* This CSS can be deleted. It is only used for the first chapter */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--accent);
+}
+
+.card-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Container System */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xl);
+}
+
+.container-sm {
+  max-width: 800px;
+  margin: var(--spacing-xl) auto;
+  padding: var(--spacing-xl);
+}
+
+/* Grid System */
+.grid {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Animation System */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+
 .welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: var(--primary, #ffb400);
+  color: var(--white, #ffffff);
   text-align: center;
-  margin: 5rem 14rem;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.welcome h1 {
+  font-family: "Roboto", serif;
   font-size: 4rem;
-  color: aliceblue;
   font-weight: bold;
-  text-shadow: 2px 3px 4px lightslategray;
+  margin-bottom: 1rem;
+  text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid var(--secondary, #00a6ed);
+  padding-bottom: 0.5rem;
+}
+
+.welcome div {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: var(--offWhite, #f2f2f3);
+}
+
+.welcome span {
+  font-weight: bold;
+  color: var(--white, #ffffff);
+}
+
+
+.list-container a {
+  transition: all 0.2s ease;
+}
+
+.list-container a:hover {
+  color: var(--highlight);
+  text-decoration: underline;
+}
+
+
+.profile-image {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+  border-color: var(--highlight);
+  box-shadow: var(--shadow-lg);
+}
+
+.profile-image-small {
+  width: 40px;
+  height: 40px;
+}
+
+.profile-image-medium {
+  width: 80px;
+  height: 80px;
+}
+
+.profile-image-large {
+  width: 150px;
+  height: 150px;
+}
+
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  margin-bottom: var(--spacing-lg);
+  transition: all 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+}
+
+.profile-info h3 {
+  margin: 0 0 var(--spacing-xs) 0;
+  color: var(--text-primary);
+}
+
+.profile-info p {
+  margin: 0;
+  color: var(--text-secondary);
 }
 

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import "./Login.css"
 import { getUserByEmail } from "../user/UserServices"
 export const Login = () => {
-  const [email, set] = useState("email@example.com")//uses useState to manage the email input state
+  const [email, set] = useState("user@email.com")//uses useState to manage the email input state
   const navigate = useNavigate()// useNavigate is a hook that allows you to navigate to different routes in your application
 
   const handleLogin = (event) => {
@@ -56,7 +56,11 @@ export const Login = () => {
         </form>
       </section>
       <section>
-        <Link to="/register">Not a member yet?</Link>
+        <Link to="/register">
+          <button className="login-btn btn-secondary" type="button">
+            Sign Up
+          </button>
+        </Link>
       </section>
     </main>
   )

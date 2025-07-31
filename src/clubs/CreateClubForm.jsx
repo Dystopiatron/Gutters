@@ -28,7 +28,6 @@ export const CreateClubForm = ({ onClubCreated }) => {
       if (onClubCreated) onClubCreated()
     })
   }
-
   return (
     <form className="list-container" onSubmit={newClub}>
       <h2>Create a New Club</h2>

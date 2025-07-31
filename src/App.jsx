@@ -7,13 +7,15 @@ import { WelcomePage } from "./welcome/WelcomePage"
 import { Login } from "./auth/Login"
 import { ProtectedRoute } from "./auth/ProtectedRoute"
 import { UserProfile } from "./user/UserProfile"
+import { ViewUserProfile } from "./user/ViewUserProfile"
+import { Register } from "./auth/Register"
 
 
 export const App = () => {
   return (
     <Routes>
-
       <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
 
 
       <Route element={<ProtectedRoute />}>
@@ -29,6 +31,7 @@ export const App = () => {
          <Route index element={<WelcomePage />} />
 <Route path="comics" element={<AllComics />} />
 <Route path="user" element={<AllUsers />} />
+<Route path="users/:userId" element={<ViewUserProfile />} />
 <Route path="clubs" element={<AllClubs />} />
 <Route path="profile" element={<UserProfile />} />
         </Route>

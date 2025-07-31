@@ -2,25 +2,34 @@
 .welcome {
   display: flex;
   flex-direction: column;
-  align-items: center;                      
-    justify-content: center;
-
-    height: 100vh;
-    background-color: var(--primary);
-
-    color: var(--white);    
-    font-size: 2rem;
-    text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: var(--primary, #ffb400);
+  color: var(--white, #ffffff);
+  text-align: center;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .welcome h1 {
-  font-size: 3rem;
+  font-family: "Roboto", serif;
+  font-size: 4rem;
+  font-weight: bold;
   margin-bottom: 1rem;
+  text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid var(--secondary, #00a6ed);
+  padding-bottom: 0.5rem;
 }
+
 .welcome div {
+  font-family: "Nunito", sans-serif;
   font-size: 1.5rem;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  color: var(--offWhite, #f2f2f3);
 }
+
 .welcome span {
   font-weight: bold;
+  color: var(--white, #ffffff);
 }
